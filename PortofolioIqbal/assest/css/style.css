@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Logo";
+    src: url('/assest/font/EduAUVICWANTHand-VariableFont_wght.ttf') format('truetype');
+}
+/* Color design */
+:root{
+    --primary1: rgb(22, 22, 22);
+    --primary2: rgb(244, 242, 242);
+    --green:rgb(0, 221, 136);
+    --green2:rgb(4, 188, 117);
+}
+
+body{
+   background-color: var(--primary1);
+}
+/* Header start */
+header{
+    width: 100vw;
+    padding: 20px;
+    position: fixed;
+    background-color: var(--primary1);
+    z-index: 99;
+}
+.navbar{
+    /* color: var(--primary2); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: fixed;
+    z-index: 99; */
+}
+.nav-logo{
+    color: var(--primary2);
+    font-family: "Logo",cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+.nav-logo h1 span{
+    color: var(--green);
+}
+.nav{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav a{
+    color: var(--primary2);
+    font-size: 18px;
+}
+.nav a:hover{
+    color: var(--green);
+    /* border-bottom: 1px solid green; */
+}
+.nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem ;
+    border-bottom: 0.1rem solid var(--green);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+.nav a:hover::after{
+    transform: scaleX(0.8);
+}
+.extra{
+    display: none;
+}
+/* Header end*/
+
+/* Hero start */
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient((250deg), rgba(0, 221, 136, 0.184), rgba(22, 22, 22, 0.31)); */
+}
+.hero main{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.left{
+    border-left: 3px solid var(--green);
+   color: var(--primary2);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 400px;
+   height: 200px;
+   padding-left: 20px;
+   /* background-color: aliceblue; */
+   font-family: sans-serif;
+}
+.left h4{
+    font-size: 20px;
+}
+.left h1{
+    font-size: 50px;
+}
+.left a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    width: 130px;
+    height: 30px;
+    color: var(--primary1);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.left a:hover{
+    background-color: var(--green2) ;
+    /* color: var(--primary1); */
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: var(--green);
+    animation: profile 5s linear infinite;   
+    box-shadow: 1px 1px 10px var(--primary2); 
+}
+.right img{
+    width: 250px;
+    animation: profileimg 3s infinite;
+    filter: drop-shadow(1px 1px 10px var(--primary1));
+}
+@keyframes profile{
+    0%{
+        border-radius: 50% 10% ;
+    }
+    50%{
+        border-radius:10% 50%;
+    }
+    100%{
+        border-radius: 50% 10% ;
+    }
+}
+@keyframes profileimg{
+    0%{
+        width: 250px;
+    }
+    50%{
+        width: 260px;
+    }
+    100%{
+        width: 250px ;
+    }
+}
+
+/* Hero end */
+
+
+/* About Start */
+.about{
+    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    display: flex;
+    color: var(--primary2);
+    padding: 100px;
+    background-color: var(--primary1);
+    /* background-color: var(--primary1); */
+}
+.about h1{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    /* margin-left: 100px ; */
+    /* width: 100%; */
+    gap: 4px;
+}
+.about h1 span{
+    color: var(--green2);
+}
+.about main{
+    /* align-items: center; */
+    color: var(--primary2);
+    /* background-color: red; */
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+    justify-content: center;
+}
+.about main div{
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(to right, var(--green), rgba(50, 50, 50, 0.318));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--primary2);
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.about main div:hover{
+    background: linear-gradient(to left, var(--green), rgba(50, 50, 50, 0.318));
+}
+/* About End */
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    /* Header start */
+    header{
+        /* position: relative; */
+        /* border: 1px solid var(--green); */
+    }
+    .nav-logo{
+        font-size: ;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav {
+        width: 200px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        left: -150px;
+        top: 90px;
+        position: absolute;
+        height: 300px;
+        transition: 0.7s;
+        overflow-y: hidden;
+        opacity: 0;
+        z-index: -5;
+    }
+    .nav.active{
+       left: 0;
+       opacity: 1;
+       background-color: var(--primary1);
+    }
+    .extra{
+        display: flex;
+    }
+    #menu{
+        color: var(--green);
+    }
+    #menu:hover{
+        color: var(--primary2);
+    }
+    /* Header end */
+    
+    /* Hero start */
+    .hero main{
+        flex-direction: column;
+        /* justify-content: center; */
+        gap: 80px;
+        /* background-color: red; */
+    }
+    .left{
+        height: 150px;
+        margin-left: 130px;
+        border-left: none;
+        border-left: 3px solid var(--green);
+    }
+    .left h4{
+        font-size: 15px;
+    }
+    .left h1{
+        font-size: 30px;
+    }
+    .left h2{
+        font-size: 15px;
+    }
+    .right{
+        width: 200px;
+        height: 200px;
+    }
+   .hero main .right #profile{
+        width: 10px;
+    }
+    /*Hero end */
+}
+
+@media (max-width: 769px){
+    .nav-logo{
+        font-size: 18px;
+    }
+    .nav a{
+        font-size: 18px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav {
+        /* background-color: aqua; */
+        width: 200px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        left: -150px;
+        top: 90px;
+        position: absolute;
+        height: 300px;
+        transition: 0.7s;
+        overflow-y: hidden;
+        opacity: 0;
+        z-index: -5;
+    }
+    .nav.active{
+        left: 0;
+        opacity: 1;
+        background-color: var(--primary1);
+    }
+    .extra{
+        display: flex;
+    }
+    #menu{
+        color: var(--green);
+    }
+    #menu:hover{
+        color: var(--primary2);
+    }
+    .hero main{
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        padding: 20px;
+    }
+    .left h4{
+        font-size: 15px;
+    }
+    .left h1{
+        font-size: 30px;
+    }
+    .left h2{
+        font-size: 15px;
+    }
+    .right{
+        width: 200px;
+        height: 200px;
+    }
+    .right img{
+        width: 100px;
+    }
+}
