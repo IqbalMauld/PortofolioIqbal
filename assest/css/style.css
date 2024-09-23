@@ -44,7 +44,7 @@ header{
 }
 .nav-logo{
     color: var(--primary2);
-    font-family: "Logo",sans-serif;
+    font-family: "Logo",cursive;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
