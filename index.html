@@ -105,6 +105,15 @@
     feather.replace();
   </script>
 
+      <!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script>
+gsap.from('header', {duration: 1.5 , y: -100, opacity: 0, ease: 'bounce'})
+gsap.from('.left', {duration: 1.5 , delay: 1, x: -100, opacity: 0})
+gsap.from('.right', {duration: 1.5 , delay: 1, x: 100, opacity: 0})
+
+</script>
+
     <script src="assest/js/script.js"></script>
 </body>
 </html>
