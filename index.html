@@ -8,12 +8,20 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Start -->
     <header>
         <nav class="navbar">
+          <div class="extra">
+             <span></span>
+             <span></span>
+             <span></span>
+          </div>
             <div class="nav-logo">
                 <h1><span>I</span>qbal<span>M</span>aulana</h1>
             </div>
@@ -22,11 +30,6 @@
                 <a href="#about">About Me</a>
                 <a href="#project">Services</a>
                 <a href="#contact">Contact</a>
-            </div>
-            <div class="extra">
-               <span></span>
-               <span></span>
-               <span></span>
             </div>
     </nav>
 </header>
@@ -42,7 +45,7 @@
             <a href="#">Download CV</a>
         </div>
         <div class="right">
-          <img src="assest/img/profile.png" alt="" id="profile">
+          <img src="assest/img/profile.png" alt="imageloading" id="profile">
         </div>
     </main>
  </section>
@@ -50,19 +53,19 @@
 
 <!-- About start -->
 <section class="about" id="about">
-  <main class= "abut">
+  <main>
     <div class="image">
-      <img src="/assest/img/profile.png" alt="">
+      <img src="assest/img/profile.png" alt="">
     </div>
     <div class="tentang">
-      <h1>About Me</h1>
+      <h1>About<span>Me</span></h1>
       <p>Hi! I’m Iqbal Maulana, a passionate web developer with a keen eye for design and a love for crafting seamless user experiences. With 2 years of experience in front-end and back-end development, I specialize in creating responsive, user-friendly websites that not only look great but also perform exceptionally.
 
-        I have a strong foundation in HTML, CSS, and JavaScript, and I'm proficient in frameworks such as React and Angular. On the back-end, I work with Node.js and Express, along with databases like MongoDB and SQL.</p>
-
+      I have a strong foundation in HTML, CSS, and JavaScript, and I'm proficient in frameworks such as React and Angular. On the back-end, I work with Node.js and Express, along with databases like MongoDB and SQL.</p>
     </div>
   </main>
 </section>
+
 
 <!-- About End -->
 
@@ -70,19 +73,22 @@
   <h1>Services</h1>
 <main>
   <div>
-    <h1>[]</h1>
+    <i class="feather" data-feather="box"></i>
     <h1>Game</h1>
     <h1>Development</h1>
+    <p>As a game developer, I am passionate about creating engaging and immersive experiences that captivate players. My work spans various aspects of game design and development, from conceptualization to deployment.</p>
   </div>
   <div>
-    <h1> < ></h1>
+    <i data-feather="layout"></i>
     <h1>Frontend</h1>
     <h1>Development</h1>
+    <p>As a front-end developer, I specialize in creating visually appealing and user-friendly interfaces that enhance the overall user experience. My expertise lies in translating design concepts into functional and interactive web applications using a combination of modern technologies.</p>
   </div>
   <div>
-    <h1>{ }</h1>
+    <i data-feather="eye-off"></i>
     <h1>Backend</h1>
     <h1>Development</h1>
+    <p>As a back-end developer, I focus on building the server-side logic and database management that power web applications. My role involves creating robust, scalable, and efficient systems that ensure seamless data processing and storage.</p>
   </div>
 </main>
 </section>
@@ -105,20 +111,12 @@
     feather.replace();
   </script>
 
-      <!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
-<script>
-  gsap.registerPlugin(TextPlugin);
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script> <!-- Tambahkan ini -->
+
   
-  gsap.to('.text', {duration: 1.5, delay: 2, text: 'Web Developer'});
-  gsap.from('header', {duration: 1.5, y: -100, opacity: 0, ease: 'bounce'});
-  gsap.from('.left', {duration: 1.5, delay: 1, x: -100, opacity: 0});
-  gsap.from('.right', {duration: 1.5, delay: 1, x: 100, opacity: 0});
-  gsap.from('.abut', {duration: 1.5, delay: 1, x: -100, opacity: 0});
-</script>
-
-
+<!-- My javascript -->
     <script src="assest/js/script.js"></script>
 </body>
 </html>
